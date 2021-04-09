@@ -1,16 +1,12 @@
-name: CI
+name: Test-GitHub-Actions-With-Container-Runner
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  build:
+  test-job:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/azure-cli
     steps:
-      - name: Run a one-line script
-        run: az --version
+      - run: az --version
