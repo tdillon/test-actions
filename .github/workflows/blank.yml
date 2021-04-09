@@ -17,3 +17,4 @@ jobs:
     container: mcr.microsoft.com/powershell
     steps:
       - run: $PSVersionTable
+      - shell: pwsh
