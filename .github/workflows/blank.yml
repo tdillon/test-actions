@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: alpine:latest
+    container: mcr.microsoft.com/azure-cli
     steps:
       - name: Run a one-line script
-        run: uname -a
+        run: az --version
