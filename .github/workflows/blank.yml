@@ -5,8 +5,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-job:
+
+  test-azure-cli:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/azure-cli
     steps:
       - run: az --version
+
+  test-powershell-core:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/powershell
+    steps:
+      - run: $PSVersionTable
